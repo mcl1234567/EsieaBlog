@@ -1,0 +1,23 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}Page d'accueil{% endblock %}
+{% block body %}
+    <h3 class="h3_mc">Connexion</h3><br />
+
+    <!-- Login FOSUser
+    ========================================================== -->
+    <div class="msg_mc">
+        {% for type, messages in app.session.flashBag.all %}
+            {% for message in messages %}
+                <div class="{{ type }}">
+                    {{ message|trans({}, 'FOSUserBundle') }}
+                </div>
+            {% endfor %}
+        {% endfor %}
+    </div>
+
+    <div>
+        {% block fos_user_content %}{% endblock fos_user_content %}
+    </div>
+
+{% endblock %}

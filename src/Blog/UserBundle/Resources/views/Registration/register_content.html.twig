@@ -1,0 +1,10 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+<form action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }} method="POST" class="form_mc">
+    {{ form_widget(form) }}
+    <div>
+        <p>
+			<button type="submit" id="_submit" name="_submit" class="btn btn-primary btn-lg">{{ 'registration.submit'|trans }}</button>
+		</p>
+    </div>
+</form>

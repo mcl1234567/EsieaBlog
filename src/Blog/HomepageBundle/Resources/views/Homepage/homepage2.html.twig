@@ -1,0 +1,79 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}Accueil & articles{% endblock %}
+{% block body %}
+
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="blog-nav">
+          <a class="blog-nav-item active" href="{{ path('blog_homepage2') }}">Accueil</a>
+          <a class="blog-nav-item" href="#">Nouveautés</a>
+          <a class="blog-nav-item" href="#">A propos</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="container">
+    	<div class="blog-header">
+     		<h1 class="">Le blog</h1>
+    		<p class="lead blog-description">Le blog</p>
+    	</div>
+
+		  <div class="row">
+        <div class="col-sm-8 blog-main">
+				  <div class="blog-post">
+            {% for article in articles %}
+    					<h2 class="">{{article.titre}}</h2>
+						  <!--<p class="blog-post-meta">January 1, 2014 by <a href="#">Mark</a></p>-->
+						  <p>{{article.content}}</p>
+            {% endfor %}
+				  </div><!-- /.blog-post -->
+
+          <nav>
+            <ul class="pager">
+              <li><a href="#">Previous</a></li>
+						  <li><a href="#">Next</a></li>
+            </ul>
+          </nav>
+        </div><!-- /.blog-main -->
+
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          <div class="sidebar-module sidebar-module-inset">
+          	<h4>About</h4>
+            <p>Atiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+          </div>
+          <div class="sidebar-module">
+	         	<h4>Archives</h4>
+    	     	<ol class="list-unstyled">
+        	    <li><a href="#">March 2014</a></li>
+            	<li><a href="#">February 2014</a></li>
+            </ol>
+          </div>
+				<div class="sidebar-module">
+          <h4>Elsewhere</h4>
+          <ol class="list-unstyled">
+          	<li><a href="#">GitHub</a></li>
+          	<li><a href="#">Twitter</a></li>
+          	<li><a href="#">Facebook</a></li>
+          </ol>
+        </div>
+      </div><!-- /.blog-sidebar -->
+    </div><!-- /.row -->
+  </div><!-- /.container -->
+
+  <footer class="blog-footer">
+    <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+    <p>
+      <a href="#">Back to top</a>
+    </p>
+  </footer>
+
+	<!-- Scripts interaction articles avec un utilisateur authentifié
+	========================================================================-->
+	{% if is_granted("ROLE_USER") %}
+		{% block scripts %}
+			<script type="text/javascript" src=" {{ asset('js/js_mc.js') }} "></script>
+		{% endblock %}
+	{% endif %}
+
+{% endblock %}

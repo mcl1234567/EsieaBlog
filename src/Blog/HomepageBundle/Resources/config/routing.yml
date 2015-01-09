@@ -1,0 +1,15 @@
+blog_homepage_index:
+    path:     /
+    defaults: { _controller: BlogHomepageBundle:Homepage2:affichage }
+
+blog_homepage2:
+    path:     /homepage2
+    defaults: { _controller: BlogHomepageBundle:Homepage2:affichage }
+
+blog_homepage:
+    path:     /homepage
+    defaults: { _controller: BlogHomepageBundle:Homepage:homepage }
+
+blog_article_liked:
+    path:     /article_liked
+    defaults: { _controller: BlogHomepageBundle:Homepage:like }

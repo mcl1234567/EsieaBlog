@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="description" content="">
+	    <meta name="author" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>{% block title %}{% endblock %}</title>
+
+		<!-- Cascade Stylesheets
+		=========================================================-->
+		<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href=" {{ asset('css/bootstrap.min.css') }} "> <!-- Bootstrap core CSS -->
+		<link rel="stylesheet" type="text/css" href=" {{ asset('css/blog.css') }} "> <!-- Blog Bootstrap -->
+		<link rel="stylesheet" type="text/css" href=" {{ asset('css/modif_css.css') }} "> <!-- bidouillage Bootstrap -->
+
+	    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	    <!--[if lt IE 9]>
+	      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+
+		<link rel="icon" href="">
+		{% block styles %}{% endblock %}
+	</head>
+	<body>
+		{% block nav %}{% include '::nav.html.twig' %}{% endblock %}
+		{% block body %}{% endblock %}
+
+		<!-- Module de connexion 
+		===============================================================-->
+		<div class="modal fade" id="myLoginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+		        <h4 class="modal-title" id="myModalLabel">Connexion</h4>
+		      </div>
+		      <div class="modal-body">
+		      	{% block fos_user_content %}
+				{% if fosuser_var.error %}
+				  <div class="alert alert-warning msg_mc" role="alert">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+				{% endif %}
+
+				<form action="{{ path("fos_user_security_check") }}" method="post"  class="form_mc">
+				  <input type="hidden" name="_csrf_token" value="{{ fosuser_var.csrf_token }}" /> <br /><br />
+
+				  <label for="username">Nom d'utilisateur : </label>
+				  <input type="text" id="username" name="_username" value="{{ fosuser_var.last_username }}" required="required" placeholder="pseudonyme" />
+				  <br /><br />
+
+				  <label for="password">Mot de passe : </label>
+				  <input type="password" id="password" name="_password" required="required" placeholder="*******"  /> <br /><br />
+
+				  <p> <button type="submit" id="_submit" name="_submit" class="btn btn-primary btn-lg">Connexion</button> </p>
+				</form>
+				{% endblock fos_user_content %}
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		<!-- Fin Module de connexion -->
+
+		<!-- JavaScript
+	    Placed at the end of the document so the pages load faster
+		=========================================================-->
+		<script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+		<!-- Bootstrap core JavaScript -->
+		<script type="text/javascript" src=" {{ asset('js/bootstrap.min.js') }} "></script>
+		<!-- Holder - client side image placeholders -->
+	    <script src=" {{ asset('js/docs.min.js') }} "></script>
+	    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	    <script src=" {{ asset('js/ie10-viewport-bug-workaround.js') }} "></script>
+	    <!-- Ajout des cripts supplémentaires dans les templates qui héritent -->
+		{% block scripts %}{% endblock %}
+	</body>
+</html>

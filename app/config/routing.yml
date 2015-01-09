@@ -1,0 +1,20 @@
+blog_like:
+    resource: "@BlogLikeBundle/Resources/config/routing.yml"
+    prefix:   /
+
+blog_user:
+    resource: "@BlogUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+blog_articles:
+    resource: "@BlogArticlesBundle/Resources/config/routing.yml"
+    prefix:   /
+
+blog_homepage:
+    resource: "@BlogHomepageBundle/Resources/config/routing.yml"
+    prefix:   /
+
+
+# app/config/routing.yml
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"

@@ -1,0 +1,48 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}Homepage{% endblock %}
+{% block body %}
+
+	{% if is_granted("ROLE_USER") %}
+		<h1 class="h1_mc">Welcome {{app.user.username}} ! {{app.user.username}} </h1><br />
+	{% else %}
+		<h1 class="h1_mc">Welcome !</h1><br />
+	{% endif %}
+
+	<!-- Bloc Liste d'articles 
+	===============================================================-->
+	<div class="articles_mc">
+		<h3 class="libelle_mc"> Notre liste d'articles : </h3><br />
+		{% for article in articles %} 
+			<h3>
+				{{ article.titre }} 
+				<span class="espacement_mc"></span>
+				{% if is_granted("ROLE_USER") %}
+					{% if article.isliked == "no" %}
+				  		<button type="button" onclick="likes(this.id)" class="btn btn-primary" id="{{article.id}}"> {{article.nombreLikes}} Likes </button>
+				  	{% elseif article.isliked == "yes" %}
+				  		<button type="button" onclick="likes(this.id)" class="btn btn-success" id="{{article.id}}"> {{article.nombreLikes}} Likes </button>
+				  	{% endif %}
+				{% else %}
+					<a href="#">
+		    			<span class="label label-default">
+		    				{{article.nombreLikes}} Likes
+		    			</span>
+		    		</a>
+				{% endif %}
+	    	</h3>
+	    	<br />
+		{% else %} Pas d'articles. 
+		{% endfor %}
+	</div>
+	<!-- Fin Bloc Liste d'articles -->
+
+	<!-- Scripts interaction articles avec un utilisateur authentifié
+	========================================================================-->
+	{% if is_granted("ROLE_USER") %}
+		{% block scripts %}
+			<script type="text/javascript" src=" {{ asset('js/js_mc.js') }} "></script>
+		{% endblock %}
+	{% endif %}
+
+{% endblock %}

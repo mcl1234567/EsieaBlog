@@ -1,0 +1,88 @@
+.espacement_mc {
+	display: inline-block;
+	width: 50px;
+}
+
+.h3_mc {
+	margin: auto;
+	width: 350px;
+}
+
+.libelle_mc {
+	text-align: center;
+	margin: auto;
+}
+
+.footer_mc {
+	margin-left: 50px;
+}
+
+/* style du login */
+.form_mc {
+	margin: auto;
+	width: 500px;
+}
+
+.form_mc input {
+	width: 200px;
+}
+
+.form_mc label {
+	width: 200px;
+}
+
+.form_mc p {
+	width: 150px;
+	margin: auto;
+	margin-top: 55px;
+}
+
+.form_mc button {
+	width: 150px;
+}
+
+.h1_mc {
+	width: 600px;
+	margin: auto;
+	margin-bottom: 50px;
+}
+
+.h3_mc {
+	width: 120px;
+	margin: auto;
+}
+
+.msg_mc {
+	width: 400px;
+	margin: auto;
+}
+
+.container_mc div {
+	width: 800px;
+	margin: auto;
+}
+
+/******************/
+/* Style articles */
+.articles_mc {
+	width: 500px;
+	margin: auto;	
+}
+
+.user_articles_mc {
+	width: 1000px;
+	margin-left: 220px;	
+}
+
+
+.user_articles_mc {
+	width: 1000px;
+	margin-left: 220px;	
+}
+
+.navbar {
+  position: relative;
+  min-height: 50px;
+  margin-bottom: 0;
+  border: 1px solid transparent;
+}

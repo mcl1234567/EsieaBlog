@@ -1,0 +1,3 @@
+blog_like_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: BlogLikeBundle:Default:index }
