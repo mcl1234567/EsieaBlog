@@ -25,12 +25,12 @@ Il contient un module de connexion (login, inscription, logout).<br />
 
 <b>POST </b>: <br />
 Pour ajouter un article :<br />
-DEUX. Il faut être connecter en tant que membre (ROLE_USER) :<br />
+1. Il faut être connecter en tant que membre (ROLE_USER) :<br />
 a. Membre créé : morvan ( mot de passe : morvan )<br />
 b. Membre créé : samir ( mot de passe : samir )<br />
 c. Ou création d'un nouveau membre via l'inscription ( http://localhost/www/web_calmel_maikhaf/web/app_dev.php/register/ ) <br />
 
-2. Ecrire un article ( http://localhost/www/web_calmel_maikhaf/web/app_dev.php/article/creation )<br />
+Deux. Ecrire un article ( http://localhost/www/web_calmel_maikhaf/web/app_dev.php/article/creation )<br />
 a. Cliquer sur écrire un article.<br />
 b. Remplir le formulaire ( titre, contenu ) et valider.<br />
 c. L'article sera généré sur l'accueil du blog.<br />
