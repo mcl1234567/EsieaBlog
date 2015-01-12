@@ -51,3 +51,5 @@ Tutoriels
 Tutoriel git : https://docs.google.com/document/d/18YZ06rF1Y2-cDR6lnzfN3m_lEvpyhkPasZjndH3Z5dU/edit?usp=sharing
 
 Tutoriel Symfony 2 : https://docs.google.com/document/d/1FxndwlUNSStfr_lX4jt-BK020kGasDZ-uJwXz_tORt8/edit?usp=sharing
+
+Playlist Symfony 2 : http://www.youtube.com/playlist?list=PL_Yw_DWk4vrN31AlkHF4ZknDjXiockJ3y
