@@ -22,7 +22,7 @@ GET : Le blog contient 3 articles par défaut, sur l'accueil
 et une gestion des articles.
 Il contient un module de connexion (login, inscription, logout).
 
-POST :
+POST : <br />
 1. Pour ajouter un article :
 	Il faut être connecter en tant que membre (ROLE_USER) :
 		a. Membre créé : morvan ( mot de passe : morvan )
