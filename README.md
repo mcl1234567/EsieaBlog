@@ -44,3 +44,10 @@ c. L'article affiché en page d'accueil sera modifié à cette suite.<br />
 <b>DELETE </b>:<br />
 4. Suppression de l'article ( http://localhost/www/web_calmel_maikhaf/web/app_dev.php/article/supprimer/8 )<br />
 a. Cliquer sur supprimer en dessous de l'article correspondant.
+
+Tutoriels
+---------------
+
+Tutoriel git : https://docs.google.com/document/d/18YZ06rF1Y2-cDR6lnzfN3m_lEvpyhkPasZjndH3Z5dU/edit?usp=sharing
+
+Tutoriel Symfony 2 : https://docs.google.com/document/d/1FxndwlUNSStfr_lX4jt-BK020kGasDZ-uJwXz_tORt8/edit?usp=sharing
