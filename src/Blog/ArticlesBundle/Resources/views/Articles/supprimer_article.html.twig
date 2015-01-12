@@ -1,0 +1,30 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}Accueil & articles{% endblock %}
+{% block body %}
+
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="blog-nav">
+          <a class="blog-nav-item" href="{{ path('blog_homepage2') }}">Accueil</a>
+          <a class="blog-nav-item" href="#">Nouveautés</a>
+          <a class="blog-nav-item" href="{{ path('creation_article') }}">Ecrire un article</a>
+          <a class="blog-nav-item" href="#">A propos</a>
+        </nav>
+      </div>
+    </div>
+	<br />
+    
+    <div class="container">
+      <p>Article supprimé avec succès</p>
+    </div><!-- /.container -->
+
+  <!-- Scripts interaction articles avec un utilisateur authentifié
+  ========================================================================-->
+  {% if is_granted("ROLE_USER") %}
+    {% block scripts %}
+      <script type="text/javascript" src=" {{ asset('js/js_mc.js') }} "></script>
+    {% endblock %}
+  {% endif %}
+
+{% endblock %}

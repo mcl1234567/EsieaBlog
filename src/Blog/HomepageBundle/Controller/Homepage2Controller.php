@@ -53,7 +53,8 @@ class Homepage2Controller extends Controller {
         $users = $manager->getRepository("BlogUserBundle:User")->findAll();
 
         // Envoi du template des articles en tant que membre
-        return $this->render('BlogHomepageBundle:Homepage:homepage2.html.twig', array('articles' => $articles, 'fosuser_var' => $fosuser_var, 'users' => $users));
+        return $this->render('BlogHomepageBundle:Homepage:homepage2.html.twig', array(
+            'articles' => $articles, 'fosuser_var' => $fosuser_var, 'users' => $users));
         //return $this->render('BlogHomepageBundle:Homepage:homepage2.html.twig');
     }
 

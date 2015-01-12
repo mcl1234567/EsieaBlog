@@ -43,10 +43,10 @@ class Article {
     private $dateLike;
 
     /**
-     * @var integer
-     * @ORM\Column(name="auteur_id", type="integer")
+     * @var string
+     * @ORM\Column(name="auteur", type="string")
      */
-    private $auteurId;
+    private $auteur;
 
     /**
      * @var string
@@ -152,24 +152,24 @@ class Article {
     }
 
     /**
-     * Set auteurId
-     * @param integer $auteurId
+     * Set auteur
+     * @param string $auteur
      * @return Article
      */
-    public function setAuteurId($auteurId)
+    public function setAuteur($auteur)
     {
-        $this->auteurId = $auteurId;
+        $this->auteur = $auteur;
     
         return $this;
     }
 
     /**
-     * Get auteur Id
-     * @return integer
+     * Get auteur
+     * @return string
      */
-    public function getAuteurId()
+    public function getAuteur()
     {
-        return $this->auteurId;
+        return $this->auteur;
     }
 
     /**

@@ -24,21 +24,24 @@ class ArticleData implements FixtureInterface {
         $article1->setNombreLikes(0);
         $article1->setIsLiked("no");
         $article1->setContent("Contenu du premier billet");
-        $article1->setAuteurId("4");
+        //$article1->setAuteurId("4");
+        $article1->setAuteur("morvan");
 
         $article2 = new Article();
         $article2->setTitre("Second billet");
         $article2->setNombreLikes(0);
         $article2->setIsLiked("no");
         $article2->setContent("Contenu du second billet");
-        $article2->setAuteurId("4");
+        //$article2->setAuteurId("4");
+        $article2->setAuteur("morvan");
 
         $article3 = new Article();
         $article3->setTitre("Troisième billet");
         $article3->setNombreLikes(0);
         $article3->setIsLiked("no");
         $article3->setContent("Contenu du troisième billet");
-        $article3->setAuteurId("4");
+        //$article3->setAuteurId("4");
+        $article3->setAuteur("morvan");
 
         // Préparation
         $manager->persist($article1);

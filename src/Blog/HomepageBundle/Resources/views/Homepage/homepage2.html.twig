@@ -8,6 +8,9 @@
         <nav class="blog-nav">
           <a class="blog-nav-item active" href="{{ path('blog_homepage2') }}">Accueil</a>
           <a class="blog-nav-item" href="#">Nouveautés</a>
+          {% if is_granted("ROLE_USER") %}
+            <a class="blog-nav-item" href="{{ path('creation_article') }}">Ecrire un article</a>
+          {% endif %}
           <a class="blog-nav-item" href="#">A propos</a>
         </nav>
       </div>
@@ -19,28 +22,34 @@
     		<p class="lead blog-description">Le blog</p>
     	</div>
 
+      <!-- Liste d'articles -->
 		  <div class="row">
         <div class="col-sm-8 blog-main">
 				  <div class="blog-post">
             {% for article in articles %}
     					<h2 class="">{{article.titre}}</h2>
 						  <!--<p class="blog-post-meta">January 1, 2014 by <a href="#">Mark</a></p>-->
+              <p style="font-size:12px">Auteur : {{article.auteur}}</p>
 						  <p>{{article.content}}</p>
+              <p style="font-size:12px">
+                <a href="{{ path('modifier_article', {'idArticle': article.id}) }}">modifier</a> - 
+                <a href="{{ path('supprimer_article', {'idArticle': article.id}) }}">supprimer</a>
+              </p>
             {% endfor %}
 				  </div><!-- /.blog-post -->
 
-          <nav>
+          <!--<nav>
             <ul class="pager">
               <li><a href="#">Previous</a></li>
 						  <li><a href="#">Next</a></li>
             </ul>
-          </nav>
+          </nav>-->
         </div><!-- /.blog-main -->
 
         <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
           <div class="sidebar-module sidebar-module-inset">
           	<h4>About</h4>
-            <p>Atiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+            <p>Ztiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
           </div>
           <div class="sidebar-module">
 	         	<h4>Archives</h4>
@@ -63,9 +72,7 @@
 
   <footer class="blog-footer">
     <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-    <p>
-      <a href="#">Back to top</a>
-    </p>
+    <p> <a href="#">Back to top</a> </p>
   </footer>
 
 	<!-- Scripts interaction articles avec un utilisateur authentifié

@@ -1,0 +1,19 @@
+creation_article:
+    path:     /article/creation
+    defaults: { _controller: BlogArticlesBundle:Article:creationArticle }
+
+ajout_article:
+    path:     /article/ajout
+    defaults: { _controller: BlogArticlesBundle:Article:ajoutArticle }
+
+modifier_article:
+    path:     /article/modifier/{idArticle}
+    defaults: { _controller: BlogArticlesBundle:Article:modificationArticle }
+
+modifier_envoi_article:
+    path:     /article/modification
+    defaults: { _controller: BlogArticlesBundle:Article:modificationEnvoiArticle }
+
+supprimer_article:
+    path:     /article/supprimer/{idArticle}
+    defaults: { _controller: BlogArticlesBundle:Article:suppressionArticle }
