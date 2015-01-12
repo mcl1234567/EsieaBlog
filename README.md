@@ -31,19 +31,19 @@ b. Membre créé : samir ( mot de passe : samir )<br />
 c. Ou création d'un nouveau membre via l'inscription ( http://localhost/www/web_calmel_maikhaf/web/app_dev.php/register/ ) <br />
 
 Deux. Ecrire un article ( http://localhost/www/web_calmel_maikhaf/web/app_dev.php/article/creation )<br />
-a. Cliquer sur écrire un article.<br />
+a. Dans le menu, cliquer sur écrire un article.<br />
 b. Remplir le formulaire ( titre, contenu ) et valider.<br />
 c. L'article sera généré sur l'accueil du blog.<br />
 
 <b>UPDATE </b>:<br />
 3. Modification de l'article ( http://localhost/www/web_calmel_maikhaf/web/app_dev.php/article/modifier/8 )<br />
-a. Cliquer sur modifier en dessous de l'article correspondant.<br />
+a. Sur l'accueil, cliquer sur modifier en dessous de l'article correspondant.<br />
 b. Entrer les données à modifier dans le formulaire et valider.<br />
 c. L'article affiché en page d'accueil sera modifié à cette suite.<br />
 
 <b>DELETE </b>:<br />
 4. Suppression de l'article ( http://localhost/www/web_calmel_maikhaf/web/app_dev.php/article/supprimer/8 )<br />
-a. Cliquer sur supprimer en dessous de l'article correspondant.
+a. Sur l'accueil, cliquer sur supprimer en dessous de l'article correspondant.
 
 Tutoriels
 ---------------
