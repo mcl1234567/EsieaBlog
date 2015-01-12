@@ -21,26 +21,26 @@ Objectifs pratiques (50%) :
 GET : <br />
 Le blog contient 3 articles par défaut, sur l'accueil <br />
 et une gestion des articles.<br />
-Il contient un module de connexion (login, inscription, logout).
+Il contient un module de connexion (login, inscription, logout).<br />
 
 POST : <br />
-1. Pour ajouter un article :<br />
-	a. Il faut être connecter en tant que membre (ROLE_USER) :<br />
-		I. Membre créé : morvan ( mot de passe : morvan )<br />
-		II. Membre créé : samir ( mot de passe : samir )<br />
-		III. Ou création d'un nouveau membre via l'inscription ( http://localhost/www/web_calmel_maikhaf/web/app_dev.php/register/ ) <br />
+Pour ajouter un article :
+1. Il faut être connecter en tant que membre (ROLE_USER) :<br />
+a. Membre créé : morvan ( mot de passe : morvan )<br />
+b. Membre créé : samir ( mot de passe : samir )<br />
+c. Ou création d'un nouveau membre via l'inscription ( http://localhost/www/web_calmel_maikhaf/web/app_dev.php/register/ ) <br />
 
 2. Ecrire un article ( http://localhost/www/web_calmel_maikhaf/web/app_dev.php/article/creation )<br />
-	a. Cliquer sur écrire un article.<br />
-	b. Remplir le formulaire ( titre, contenu ) et valider.<br />
-	c. L'article sera généré sur l'accueil du blog.<br />
+a. Cliquer sur écrire un article.<br />
+b. Remplir le formulaire ( titre, contenu ) et valider.<br />
+c. L'article sera généré sur l'accueil du blog.<br />
 
 UPDATE :<br />
 3. Modification de l'article ( http://localhost/www/web_calmel_maikhaf/web/app_dev.php/article/modifier/8 )<br />
-	a. Cliquer sur modifier en dessous de l'article correspondant.<br />
-	b. Entrer les données à modifier dans le formulaire et valider.<br />
-	c. L'article affiché en page d'accueil sera modifié à cette suite.<br />
+a. Cliquer sur modifier en dessous de l'article correspondant.<br />
+b. Entrer les données à modifier dans le formulaire et valider.<br />
+c. L'article affiché en page d'accueil sera modifié à cette suite.<br />
 
 DELETE :<br />
 4. Suppression de l'article ( http://localhost/www/web_calmel_maikhaf/web/app_dev.php/article/supprimer/8 )<br />
-	a. Cliquer sur supprimer en dessous de l'article correspondant.
+a. Cliquer sur supprimer en dessous de l'article correspondant.
