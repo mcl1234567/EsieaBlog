@@ -28,7 +28,7 @@ POST : <br />
 	Il faut être connecter en tant que membre (ROLE_USER) :<br />
 		a. Membre créé : morvan ( mot de passe : morvan )<br />
 		b. Membre créé : samir ( mot de passe : samir )<br />
-		c. Ou création d'un nouveau membre via l'inscription ( http://localhost/www/web_calmel_maikhaf/web/app_dev.php/register/ )
+		c. Ou création d'un nouveau membre via l'inscription ( http://localhost/www/web_calmel_maikhaf/web/app_dev.php/register/ ) <br />
 
 2. Ecrire un article ( http://localhost/www/web_calmel_maikhaf/web/app_dev.php/article/creation )<br />
 	a. Cliquer sur écrire un article.<br />
