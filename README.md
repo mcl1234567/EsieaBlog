@@ -25,7 +25,7 @@ Il contient un module de connexion (login, inscription, logout).<br />
 
 <b>POST </b>: <br />
 Pour ajouter un article :<br />
-1. Il faut être connecter en tant que membre (ROLE_USER) :<br />
+DEUX. Il faut être connecter en tant que membre (ROLE_USER) :<br />
 a. Membre créé : morvan ( mot de passe : morvan )<br />
 b. Membre créé : samir ( mot de passe : samir )<br />
 c. Ou création d'un nouveau membre via l'inscription ( http://localhost/www/web_calmel_maikhaf/web/app_dev.php/register/ ) <br />
