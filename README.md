@@ -18,7 +18,8 @@ Objectifs pratiques (50%) :
 
 -------
 
-GET : Le blog contient 3 articles par défaut, sur l'accueil <br />
+GET : <br />
+Le blog contient 3 articles par défaut, sur l'accueil <br />
 et une gestion des articles.<br />
 Il contient un module de connexion (login, inscription, logout).
 
