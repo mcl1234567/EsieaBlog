@@ -1,6 +1,5 @@
 Esiea - Projet web (PHP/HTML5) - Blog
-
--------
+========================================
 
 Sujet : Création d'un système de gestion d'objet et son API (ex : blog, bibliothèque...)
 
